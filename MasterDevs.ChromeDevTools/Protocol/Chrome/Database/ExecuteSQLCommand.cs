@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Database
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Database
 {
 	[Command(ProtocolName.Database.ExecuteSQL)]
 	[SupportedBy("Chrome")]

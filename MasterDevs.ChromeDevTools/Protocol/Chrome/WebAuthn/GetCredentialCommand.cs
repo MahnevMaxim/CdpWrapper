@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.WebAuthn
+namespace Mybot.ChromeDevTools.Protocol.Chrome.WebAuthn
 {
 	/// <summary>
 	/// Returns a single credential stored in the given virtual authenticator that matches the credential ID.

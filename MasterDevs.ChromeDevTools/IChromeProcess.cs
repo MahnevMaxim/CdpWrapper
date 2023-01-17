@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public interface IChromeProcess : IDisposable
     {

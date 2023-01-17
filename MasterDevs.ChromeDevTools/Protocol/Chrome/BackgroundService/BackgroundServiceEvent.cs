@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.BackgroundService
+namespace Mybot.ChromeDevTools.Protocol.Chrome.BackgroundService
 {
 	[SupportedBy("Chrome")]
 	public class BackgroundServiceEvent

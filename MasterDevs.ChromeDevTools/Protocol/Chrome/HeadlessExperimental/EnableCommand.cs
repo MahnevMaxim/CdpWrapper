@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeadlessExperimental
+namespace Mybot.ChromeDevTools.Protocol.Chrome.HeadlessExperimental
 {
 	/// <summary>
 	/// Enables headless events for the target.

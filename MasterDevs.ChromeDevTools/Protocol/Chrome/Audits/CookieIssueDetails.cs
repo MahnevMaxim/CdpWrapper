@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Audits
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Audits
 {
 	/// <summary>
 	/// This information is currently necessary, as the front-end has a difficult time finding a specific cookie. With this, we can convey specific error information without the cookie.

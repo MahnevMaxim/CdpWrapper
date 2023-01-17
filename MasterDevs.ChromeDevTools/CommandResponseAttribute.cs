@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public class CommandResponseAttribute : Attribute, IMethodNameAttribute

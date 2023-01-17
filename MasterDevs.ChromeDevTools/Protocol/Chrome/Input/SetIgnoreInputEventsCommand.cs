@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Input
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Input
 {
 	/// <summary>
 	/// Ignores input events (useful while auditing page).

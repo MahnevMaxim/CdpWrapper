@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
 	/// Issued for every compilation cache generated. Is only available if Page.setGenerateCompilationCache is enabled.

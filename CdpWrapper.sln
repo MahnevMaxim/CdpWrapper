@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.32804.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CdpWrapper", "CdpWrapper\CdpWrapper.csproj", "{A265A8A6-FB9F-4EED-9E4A-4FE862154803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdpWrapper", "CdpWrapper\CdpWrapper.csproj", "{A265A8A6-FB9F-4EED-9E4A-4FE862154803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDevs.ChromeDevTools", "MasterDevs.ChromeDevTools\MasterDevs.ChromeDevTools.csproj", "{2003D2B0-3E6A-48FB-AF3D-48F65DFD7F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mybot.ChromeDevTools", "MasterDevs.ChromeDevTools\Mybot.ChromeDevTools.csproj", "{2003D2B0-3E6A-48FB-AF3D-48F65DFD7F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDevs.ChromeDevTools.ProtocolGenerator", "MasterDevs.ChromeDevTools.ProtocolGenerator\MasterDevs.ChromeDevTools.ProtocolGenerator.csproj", "{8B6166D1-36F6-4E0D-BA8D-6458157EA168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterDevs.ChromeDevTools.ProtocolGenerator", "MasterDevs.ChromeDevTools.ProtocolGenerator\MasterDevs.ChromeDevTools.ProtocolGenerator.csproj", "{8B6166D1-36F6-4E0D-BA8D-6458157EA168}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdpWrapper.Tests", "CdpWrapper.Tests\CdpWrapper.Tests.csproj", "{0E460E08-37DC-41EE-8CA2-17BA135A970B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{74A96D39-6B6E-4515-9161-4FC06AD51D36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{8B6166D1-36F6-4E0D-BA8D-6458157EA168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B6166D1-36F6-4E0D-BA8D-6458157EA168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B6166D1-36F6-4E0D-BA8D-6458157EA168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E460E08-37DC-41EE-8CA2-17BA135A970B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E460E08-37DC-41EE-8CA2-17BA135A970B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E460E08-37DC-41EE-8CA2-17BA135A970B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E460E08-37DC-41EE-8CA2-17BA135A970B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A96D39-6B6E-4515-9161-4FC06AD51D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A96D39-6B6E-4515-9161-4FC06AD51D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A96D39-6B6E-4515-9161-4FC06AD51D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A96D39-6B6E-4515-9161-4FC06AD51D36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

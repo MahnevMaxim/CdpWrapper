@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.BackgroundService
+namespace Mybot.ChromeDevTools.Protocol.Chrome.BackgroundService
 {
 	/// <summary>
 	/// Called with all existing backgroundServiceEvents when enabled, and all new events afterwards if enabled and recording.

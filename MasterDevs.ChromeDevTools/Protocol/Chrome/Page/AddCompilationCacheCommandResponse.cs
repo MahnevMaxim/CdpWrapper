@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
 	/// Seeds compilation cache for given url. Compilation cache does not survive cross-process navigation.

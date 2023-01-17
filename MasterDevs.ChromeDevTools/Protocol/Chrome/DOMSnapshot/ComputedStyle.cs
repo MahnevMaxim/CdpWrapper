@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMSnapshot
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOMSnapshot
 {
 	/// <summary>
 	/// A subset of the full ComputedStyle as defined by the request whitelist.

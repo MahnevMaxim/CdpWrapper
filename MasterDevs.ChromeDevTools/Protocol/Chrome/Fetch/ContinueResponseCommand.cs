@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Fetch
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Fetch
 {
 	/// <summary>
 	/// Continues loading of the paused response, optionally modifying the response headers. If either responseCode or headers are modified, all of them must be present.

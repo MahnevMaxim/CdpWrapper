@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Audits
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Audits
 {
 	/// <summary>
 	/// Details for a CORS related issue, e.g. a warning or error related to CORS RFC1918 enforcement.

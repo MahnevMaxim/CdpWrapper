@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Runtime
 {
 	/// <summary>
 	/// Issued when object should be inspected (for example, as a result of inspect() command line API call).

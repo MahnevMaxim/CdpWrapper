@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
+namespace Mybot.ChromeDevTools.Protocol.Chrome.LayerTree
 {
 	/// <summary>
 	/// Replays the layer snapshot and returns canvas log.

@@ -1,4 +1,4 @@
-﻿using MasterDevs.ChromeDevTools.Serialization;
+﻿using Mybot.ChromeDevTools.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebSocket4Net;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public class ChromeSession : IChromeSession
     {
@@ -28,6 +28,7 @@ namespace MasterDevs.ChromeDevTools
 
         private ManualResetEvent _soketStatusEvent = new ManualResetEvent(false);
         public Exception socketExeption;
+        internal readonly Action<string, Exception> logger;
 
         public string ProxyUser { get; set; }
         public string ProxyPass { get; set; }
@@ -35,12 +36,14 @@ namespace MasterDevs.ChromeDevTools
         public string MainSessionId { get; set; }
         public string BrowserEndPoint { get; set; }
 
-        public ChromeSession(string endpoint, ICommandFactory commandFactory, ICommandResponseFactory responseFactory, IEventFactory eventFactory)
+        public ChromeSession(string endpoint, ICommandFactory commandFactory, ICommandResponseFactory responseFactory, 
+            IEventFactory eventFactory, Action<string, Exception> logger)
         {
             _endpoint = endpoint;
             _commandFactory = commandFactory;
             _responseFactory = responseFactory;
             _eventFactory = eventFactory;
+            this.logger = logger;
         }
 
         public void Dispose()
@@ -224,6 +227,7 @@ namespace MasterDevs.ChromeDevTools
         private bool TryGetCommandResponse(string message, out ICommandResponse response)
         {
             response = _responseFactory.Create(message);
+            logger(message, null);
             return null != response;
         }
 
@@ -236,6 +240,7 @@ namespace MasterDevs.ChromeDevTools
         private bool TryGetEvent(string message, out IEvent evnt)
         {
             evnt = _eventFactory.Create(message);
+            //logger(message, null);
             return null != evnt;
         }
 

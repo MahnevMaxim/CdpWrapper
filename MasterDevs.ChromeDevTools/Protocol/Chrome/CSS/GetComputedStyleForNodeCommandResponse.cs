@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
+namespace Mybot.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
 	/// Returns the computed style for a DOM node identified by `nodeId`.

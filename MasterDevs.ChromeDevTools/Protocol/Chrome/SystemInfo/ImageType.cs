@@ -1,10 +1,10 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.SystemInfo{
+namespace Mybot.ChromeDevTools.Protocol.Chrome.SystemInfo{
 	/// <summary>
 	/// Image format of a given image.
 	/// </summary>

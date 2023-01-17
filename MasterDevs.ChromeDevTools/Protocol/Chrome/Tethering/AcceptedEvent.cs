@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tethering
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Tethering
 {
 	/// <summary>
 	/// Informs that port was successfully bound and got a specified connection id.

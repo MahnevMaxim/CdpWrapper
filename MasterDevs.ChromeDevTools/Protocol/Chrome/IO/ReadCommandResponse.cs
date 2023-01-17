@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IO
+namespace Mybot.ChromeDevTools.Protocol.Chrome.IO
 {
 	/// <summary>
 	/// Read a chunk of the stream

@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Overlay
 {
 	[SupportedBy("Chrome")]
 	public class ScrollSnapHighlightConfig

@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Schema
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Schema
 {
 	/// <summary>
 	/// Description of the protocol domain.

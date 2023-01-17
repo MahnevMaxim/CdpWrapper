@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeadlessExperimental
+namespace Mybot.ChromeDevTools.Protocol.Chrome.HeadlessExperimental
 {
 	/// <summary>
 	/// Encoding options for a screenshot.

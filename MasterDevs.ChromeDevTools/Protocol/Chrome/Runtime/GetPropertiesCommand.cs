@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Runtime
 {
 	/// <summary>
 	/// Returns properties of a given object. Object group of the result is inherited from the target object.

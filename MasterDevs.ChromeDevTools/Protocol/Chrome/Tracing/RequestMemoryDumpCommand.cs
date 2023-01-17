@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Tracing
 {
 	/// <summary>
 	/// Request a global memory dump.

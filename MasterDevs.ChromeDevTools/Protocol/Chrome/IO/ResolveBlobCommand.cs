@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IO
+namespace Mybot.ChromeDevTools.Protocol.Chrome.IO
 {
 	/// <summary>
 	/// Return UUID of Blob object specified by a remote object id.

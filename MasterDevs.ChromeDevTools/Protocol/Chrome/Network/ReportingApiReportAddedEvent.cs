@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
 	/// Is sent whenever a new report is added. And after 'enableReportingApi' for all existing reports.

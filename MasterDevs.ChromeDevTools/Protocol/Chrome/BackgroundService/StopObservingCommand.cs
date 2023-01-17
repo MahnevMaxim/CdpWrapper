@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.BackgroundService
+namespace Mybot.ChromeDevTools.Protocol.Chrome.BackgroundService
 {
 	/// <summary>
 	/// Disables event updates for the service.

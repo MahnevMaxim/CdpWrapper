@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.SystemInfo
+namespace Mybot.ChromeDevTools.Protocol.Chrome.SystemInfo
 {
 	/// <summary>
 	/// Describes a supported video encoding profile with its associated maximum resolution and maximum framerate.

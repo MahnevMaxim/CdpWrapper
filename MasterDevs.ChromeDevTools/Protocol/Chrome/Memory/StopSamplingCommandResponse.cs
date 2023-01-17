@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Memory
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Memory
 {
 	/// <summary>
 	/// Stop collecting native memory profile.

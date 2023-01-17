@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public static class ChromeSessionExtensions
     {

@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
 	/// Returns post data sent with the request. Returns an error when no data was sent with the request.

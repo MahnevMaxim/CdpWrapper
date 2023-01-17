@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Profiler
 {
 	/// <summary>
 	/// Profile node. Holds callsite information, execution statistics and child nodes.

@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
 	/// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the `cookies` field.

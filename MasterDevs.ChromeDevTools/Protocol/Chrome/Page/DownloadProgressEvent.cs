@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
 	/// Fired when download makes progress. Last call has |done| == true. Deprecated. Use Browser.downloadProgress instead.

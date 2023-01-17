@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
 	/// Fired when `Container`'s child node count has changed.

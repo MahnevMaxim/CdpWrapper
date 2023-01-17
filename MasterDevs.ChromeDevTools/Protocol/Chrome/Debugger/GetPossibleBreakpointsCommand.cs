@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Debugger
 {
 	/// <summary>
 	/// Returns possible locations for breakpoint. scriptId in start and end range locations should be the same.

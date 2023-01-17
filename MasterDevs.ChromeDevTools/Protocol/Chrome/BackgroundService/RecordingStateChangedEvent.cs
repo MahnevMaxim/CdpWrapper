@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.BackgroundService
+namespace Mybot.ChromeDevTools.Protocol.Chrome.BackgroundService
 {
 	/// <summary>
 	/// Called when the recording state for the service has been updated.

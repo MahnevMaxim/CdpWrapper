@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CacheStorage
+namespace Mybot.ChromeDevTools.Protocol.Chrome.CacheStorage
 {
 	/// <summary>
 	/// Requests cache names.

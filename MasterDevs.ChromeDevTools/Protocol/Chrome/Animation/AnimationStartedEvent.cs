@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Animation
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Animation
 {
 	/// <summary>
 	/// Event for animation that has been started.

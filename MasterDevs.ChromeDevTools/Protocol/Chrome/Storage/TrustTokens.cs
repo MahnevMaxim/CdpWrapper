@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Storage
 {
 	/// <summary>
 	/// Pair of issuer origin and number of available (signed, but not used) Trust Tokens from that issuer.

@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
+namespace Mybot.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
 	/// Requests database names for given security origin.

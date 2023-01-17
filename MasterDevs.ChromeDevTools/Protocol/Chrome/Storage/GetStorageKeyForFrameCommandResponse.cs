@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Storage
 {
 	/// <summary>
 	/// Returns a storage key given a frame id.

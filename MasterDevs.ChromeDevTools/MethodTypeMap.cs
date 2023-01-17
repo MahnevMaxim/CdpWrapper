@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public class MethodTypeMap : IMethodTypeMap
     {
@@ -29,7 +29,7 @@ namespace MasterDevs.ChromeDevTools
             {
                 if (!type.GetTypeInfo().IsClass) continue;
 
-                if (!type.Namespace.StartsWith($"MasterDevs.ChromeDevTools.Protocol.{alias}")) continue;
+                if (!type.Namespace.StartsWith($"Mybot.ChromeDevTools.Protocol.{alias}")) continue;
 
                 if (type.Name.EndsWith("CommandResponse"))
                 {

@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
+namespace Mybot.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
 	/// Creates a new special "via-inspector" stylesheet in the frame with given `frameId`.

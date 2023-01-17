@@ -1,21 +1,45 @@
-﻿using System;
+﻿using Mybot.ChromeDevTools.Protocol.Chrome.Cast;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public class ChromeProcessFactory : IChromeProcessFactory
     {
         public IDirectoryCleaner DirectoryCleaner { get; set; }
         public string ChromePath { get; }
 
-        //public ChromeProcessFactory(IDirectoryCleaner directoryCleaner, string chromePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-        //public ChromeProcessFactory(IDirectoryCleaner directoryCleaner, string chromePath = @"chr\chrome.exe")
-        public ChromeProcessFactory(IDirectoryCleaner directoryCleaner, string chromePath = @"chr\chrome.exe")
+        const string chromePath86 = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+        const string chromePath64 = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+
+        public ChromeProcessFactory(string chromePath = null)
         {
-            DirectoryCleaner = directoryCleaner;
-            ChromePath = chromePath;
+            if (chromePath == null)
+            {
+                if (File.Exists(chromePath64))
+                {
+                    ChromePath = chromePath64;
+                }
+                else if (File.Exists(chromePath86))
+                {
+                    ChromePath = chromePath86;
+                }
+                else
+                {
+                    throw new Exception($"chrome not found");
+                }
+            }
+            else
+            {
+                if (!File.Exists(chromePath))
+                {
+                    throw new Exception($"{chromePath} not exists");
+                }
+
+                ChromePath = chromePath;
+            }
         }
 
         /// <summary>
@@ -66,31 +90,39 @@ namespace MasterDevs.ChromeDevTools
                 foreach (string arg in args)
                     chromeProcessArgs.Add(arg);
 
-            var processStartInfo = new ProcessStartInfo(ChromePath, string.Join(" ", chromeProcessArgs) + " " + personaArgs);
+            var processStartInfo = new ProcessStartInfo(ChromePath, $"{string.Join(" ", chromeProcessArgs)} {personaArgs}");
             var chromeProcess = Process.Start(processStartInfo);
 
             string remoteDebuggingUrl = "http://localhost:" + port;
-            return new LocalChromeProcess(new Uri(remoteDebuggingUrl), () => DirectoryCleaner.Delete(directoryInfo), chromeProcess, path);
+            return new LocalChromeProcess(new Uri(remoteDebuggingUrl), () => new StubbornDirectoryCleaner().Delete(directoryInfo), chromeProcess, path);
         }
 
-        public IChromeProcess CreateNew(int port, bool headless, string proxyServer, string path, string proxyProtocol = null, List<string> args = null, string personaArgs = null)
+        public IChromeProcess CreateNew(int port, bool headless, string proxyServer, string profilePath, string proxyProtocol = null, List<string> args = null, string personaArgs = null)
         {
-            DirectoryInfo directoryInfo = Directory.CreateDirectory(path);
             var remoteDebuggingArg = $"--remote-debugging-port={port}";
-            var userDirectoryArg = $"--user-data-dir=\"{directoryInfo.FullName}\"";
+
             const string headlessArg = "--headless";
             //const string sizeArg = "--window-size=950,640";
             var chromeProcessArgs = new List<string>
             {
                 remoteDebuggingArg,
-                userDirectoryArg,
                 //sizeArg,
-                "--bwsi",
+                //"--bwsi",
                 "--no-first-run"
             };
 
+            DirectoryInfo directoryInfo = null;
+            if (!string.IsNullOrWhiteSpace(profilePath))
+            {
+                directoryInfo = Directory.CreateDirectory(profilePath);
+                var userDirectoryArg = $"--user-data-dir=\"{directoryInfo.FullName}\"";
+                chromeProcessArgs.Add(userDirectoryArg);
+            }
+
             if (headless)
+            {
                 chromeProcessArgs.Add(headlessArg);
+            }
 
             if (proxyServer != null)
             {
@@ -111,14 +143,14 @@ namespace MasterDevs.ChromeDevTools
                 foreach (string arg in args)
                 {
                     chromeProcessArgs.Add(arg);
-                }   
+                }
             }
-               
-            var processStartInfo = new ProcessStartInfo(ChromePath, string.Join(" ", chromeProcessArgs) + " " + personaArgs);
+
+            var processStartInfo = new ProcessStartInfo(ChromePath, $"{string.Join(" ", chromeProcessArgs)} {personaArgs}");
             var chromeProcess = Process.Start(processStartInfo);
 
             string remoteDebuggingUrl = "http://localhost:" + port;
-            return new LocalChromeProcess(new Uri(remoteDebuggingUrl), () => DirectoryCleaner.Delete(directoryInfo), chromeProcess, path);
+            return new LocalChromeProcess(new Uri(remoteDebuggingUrl), () => new StubbornDirectoryCleaner().Delete(directoryInfo), chromeProcess, profilePath);
         }
     }
 }

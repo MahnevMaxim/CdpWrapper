@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Cast
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Cast
 {
 	/// <summary>
 	/// This is fired whenever the list of available sinks changes. A sink is a device or a software surface that you can cast to.

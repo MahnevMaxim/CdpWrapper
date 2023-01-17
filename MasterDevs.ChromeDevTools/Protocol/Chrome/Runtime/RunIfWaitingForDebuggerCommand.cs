@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Runtime
 {
 	/// <summary>
 	/// Tells inspected instance to run if it was waiting for debugger to attach.

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public static class ObjectExtensions
     {

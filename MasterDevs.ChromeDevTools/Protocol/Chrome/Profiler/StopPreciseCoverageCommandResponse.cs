@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Profiler
 {
 	/// <summary>
 	/// Disable precise code coverage. Disabling releases unnecessary execution count records and allows executing optimized code.

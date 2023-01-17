@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
 	/// Fired when a new window is going to be opened, via window.open(), link click, form submission, etc.

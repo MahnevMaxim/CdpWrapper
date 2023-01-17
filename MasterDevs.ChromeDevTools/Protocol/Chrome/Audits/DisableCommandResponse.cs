@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Audits
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Audits
 {
 	/// <summary>
 	/// Disables issues domain, prevents further issues from being reported to the client.

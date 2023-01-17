@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Security
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Security
 {
 	/// <summary>
 	/// The security state of the page changed.

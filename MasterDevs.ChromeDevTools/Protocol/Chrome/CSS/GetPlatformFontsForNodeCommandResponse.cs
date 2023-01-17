@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
+namespace Mybot.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
 	/// Requests information about platform fonts which we used to render child TextNodes in the given node.

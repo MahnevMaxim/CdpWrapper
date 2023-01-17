@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public interface IErrorResponse
     {

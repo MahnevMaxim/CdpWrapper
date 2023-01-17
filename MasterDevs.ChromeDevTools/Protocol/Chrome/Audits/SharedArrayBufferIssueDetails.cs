@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Audits
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Audits
 {
 	/// <summary>
 	/// Details for a issue arising from an SAB being instantiated in, or transferred to a context that is not cross-origin isolated.

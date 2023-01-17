@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Tracing
 {
 	/// <summary>
 	/// Signals that tracing is stopped and there is no trace buffers pending flush, all data were delivered via dataCollected events.

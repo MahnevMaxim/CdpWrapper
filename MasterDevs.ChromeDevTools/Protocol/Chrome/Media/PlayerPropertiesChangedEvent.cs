@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Media
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Media
 {
 	/// <summary>
 	/// This can be called multiple times, and can be used to set / override / remove player properties. A null propValue indicates removal.

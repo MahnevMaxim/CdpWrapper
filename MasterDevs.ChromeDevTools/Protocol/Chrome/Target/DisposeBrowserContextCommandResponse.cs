@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Target
 {
 	/// <summary>
 	/// Deletes a BrowserContext. All the belonging pages will be closed without calling their beforeunload hooks.

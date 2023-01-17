@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
 	/// Set position and/or size of the browser window.

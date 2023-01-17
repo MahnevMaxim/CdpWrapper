@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.PerformanceTimeline
+namespace Mybot.ChromeDevTools.Protocol.Chrome.PerformanceTimeline
 {
 	/// <summary>
 	/// See https://github.com/WICG/LargestContentfulPaint and largest_contentful_paint.idl

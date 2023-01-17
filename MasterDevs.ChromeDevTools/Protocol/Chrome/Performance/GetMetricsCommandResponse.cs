@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Performance
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Performance
 {
 	/// <summary>
 	/// Retrieve current values of run-time metrics.

@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Input
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Input
 {
 	/// <summary>
 	/// Synthesizes a tap gesture over a time period by issuing appropriate touch events.

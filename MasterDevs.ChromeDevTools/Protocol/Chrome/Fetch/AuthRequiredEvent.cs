@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Fetch
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Fetch
 {
 	/// <summary>
 	/// Issued when the domain is enabled with handleAuthRequests set to true. The request is paused until client responds with continueWithAuth.

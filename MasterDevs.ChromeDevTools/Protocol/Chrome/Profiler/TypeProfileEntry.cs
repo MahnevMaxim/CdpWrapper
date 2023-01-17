@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Profiler
 {
 	/// <summary>
 	/// Source offset and types for a parameter or return value.

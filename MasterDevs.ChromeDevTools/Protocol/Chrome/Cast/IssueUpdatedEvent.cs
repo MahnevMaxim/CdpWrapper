@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Cast
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Cast
 {
 	/// <summary>
 	/// This is fired whenever the outstanding issue/error message changes. |issueMessage| is empty if there is no issue.

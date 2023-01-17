@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
 	/// Returns node id at given location. Depending on whether DOM domain is enabled, nodeId is either returned or not.

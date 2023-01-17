@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IO
+namespace Mybot.ChromeDevTools.Protocol.Chrome.IO
 {
 	/// <summary>
 	/// Close the stream, discard any temporary backing storage.

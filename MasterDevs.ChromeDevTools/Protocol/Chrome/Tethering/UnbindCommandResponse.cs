@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tethering
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Tethering
 {
 	/// <summary>
 	/// Request browser port unbinding.

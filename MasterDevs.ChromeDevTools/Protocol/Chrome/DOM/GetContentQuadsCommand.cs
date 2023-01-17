@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
 	/// Returns quads that describe node position on the page. This method might return multiple quads for inline nodes.

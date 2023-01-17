@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.Reflection;
 
-namespace MasterDevs.ChromeDevTools.Serialization
+namespace Mybot.ChromeDevTools.Serialization
 {
     public class MessageContractResolver : DefaultContractResolver
     {

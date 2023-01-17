@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Accessibility
 {
 	/// <summary>
 	/// The loadComplete event mirrors the load complete event sent by the browser to assistive technology when the web page has finished loading.

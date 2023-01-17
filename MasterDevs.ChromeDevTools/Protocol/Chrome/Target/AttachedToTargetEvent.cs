@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Target
 {
 	/// <summary>
 	/// Issued when attached to target because of auto-attach or `attachToTarget` command.

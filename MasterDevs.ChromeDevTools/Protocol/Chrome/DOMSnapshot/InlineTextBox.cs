@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMSnapshot
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOMSnapshot
 {
 	/// <summary>
 	/// Details of post layout rendered text positions. The exact layout should not be regarded as stable and may change between versions.

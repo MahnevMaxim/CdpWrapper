@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
+namespace Mybot.ChromeDevTools.Protocol.Chrome.ServiceWorker
 {
 	[Event(ProtocolName.ServiceWorker.WorkerRegistrationUpdated)]
 	[SupportedBy("Chrome")]

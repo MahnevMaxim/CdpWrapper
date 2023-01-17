@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
 	/// Called when shadow root is pushed into the element.

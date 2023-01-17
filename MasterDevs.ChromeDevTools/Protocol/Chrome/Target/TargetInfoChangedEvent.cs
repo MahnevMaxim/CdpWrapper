@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Target
 {
 	/// <summary>
 	/// Issued when some information about a target has changed. This only happens between `targetCreated` and `targetDestroyed`.

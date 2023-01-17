@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Media
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Media
 {
 	/// <summary>
 	/// Send a list of any errors that need to be delivered.

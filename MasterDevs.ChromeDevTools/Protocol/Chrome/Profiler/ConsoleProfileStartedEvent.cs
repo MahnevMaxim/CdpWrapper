@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Profiler
 {
 	/// <summary>
 	/// Sent when new profile recording is started using console.profile() call.

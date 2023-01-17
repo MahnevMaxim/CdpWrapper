@@ -1,10 +1,10 @@
-﻿using MasterDevs.ChromeDevTools.Serialization;
+﻿using Mybot.ChromeDevTools.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public class CommandResponseFactory : ICommandResponseFactory
     {

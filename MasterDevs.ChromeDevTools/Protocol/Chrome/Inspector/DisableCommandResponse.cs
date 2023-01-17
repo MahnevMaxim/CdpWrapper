@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Inspector
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Inspector
 {
 	/// <summary>
 	/// Disables inspector domain notifications.

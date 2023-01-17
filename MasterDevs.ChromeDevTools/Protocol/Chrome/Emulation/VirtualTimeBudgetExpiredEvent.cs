@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Emulation
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Emulation
 {
 	/// <summary>
 	/// Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.

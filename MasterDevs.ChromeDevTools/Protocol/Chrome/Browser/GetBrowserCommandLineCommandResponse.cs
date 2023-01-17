@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
 	/// Returns the command line switches for the browser process if, and only if --enable-automation is on the commandline.

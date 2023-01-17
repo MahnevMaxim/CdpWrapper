@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Accessibility
 {
 	/// <summary>
 	/// Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.

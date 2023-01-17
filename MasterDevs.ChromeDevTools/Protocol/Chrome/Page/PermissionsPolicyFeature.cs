@@ -1,10 +1,10 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page{
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Page{
 	/// <summary>
 	/// All Permissions Policy features. This enum should match the one defined in third_party/blink/renderer/core/permissions_policy/permissions_policy_features.json5.
 	/// </summary>

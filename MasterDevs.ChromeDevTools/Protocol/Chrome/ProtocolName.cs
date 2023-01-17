@@ -1,6 +1,6 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome
+namespace Mybot.ChromeDevTools.Protocol.Chrome
 {
 	public static class ProtocolName
 	{

@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMDebugger
+namespace Mybot.ChromeDevTools.Protocol.Chrome.DOMDebugger
 {
 	/// <summary>
 	/// Object event listener.

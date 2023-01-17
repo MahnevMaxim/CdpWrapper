@@ -1,10 +1,10 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage{
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Storage{
 	/// <summary>
 	/// Enum of possible storage types.
 	/// </summary>

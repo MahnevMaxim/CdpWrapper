@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Fetch
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Fetch
 {
 	/// <summary>
 	/// Authorization challenge for HTTP status code 401 or 407.

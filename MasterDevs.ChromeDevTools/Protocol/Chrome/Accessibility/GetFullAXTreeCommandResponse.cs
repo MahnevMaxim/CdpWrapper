@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Accessibility
 {
 	/// <summary>
 	/// Fetches the entire accessibility tree for the root Document

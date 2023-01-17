@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Memory
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Memory
 {
 	/// <summary>
 	/// Simulate a memory pressure notification in all processes.

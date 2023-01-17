@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Overlay
 {
 	/// <summary>
 	/// Highlight multiple elements with the CSS Grid overlay.

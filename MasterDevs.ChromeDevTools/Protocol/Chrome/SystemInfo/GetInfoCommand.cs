@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.SystemInfo
+namespace Mybot.ChromeDevTools.Protocol.Chrome.SystemInfo
 {
 	/// <summary>
 	/// Returns information about the system.

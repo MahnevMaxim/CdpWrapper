@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Console
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Console
 {
 	/// <summary>
 	/// Issued when new console message is added.

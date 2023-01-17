@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public class LocalChromeProcess : RemoteChromeProcess
     {
@@ -22,7 +22,7 @@ namespace MasterDevs.ChromeDevTools
             Process.Kill();
             Process.WaitForExit();
             //            Process.Close();
-            DisposeUserDirectory();
+            //DisposeUserDirectory();
         }
     }
 }

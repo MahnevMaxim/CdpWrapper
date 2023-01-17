@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Animation
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Animation
 {
 	/// <summary>
 	/// Disables animation domain notifications.

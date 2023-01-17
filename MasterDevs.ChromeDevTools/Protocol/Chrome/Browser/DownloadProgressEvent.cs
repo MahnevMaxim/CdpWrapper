@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
 	/// Fired when download makes progress. Last call has |done| == true.

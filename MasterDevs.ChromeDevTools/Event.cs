@@ -1,4 +1,4 @@
-﻿namespace MasterDevs.ChromeDevTools
+﻿namespace Mybot.ChromeDevTools
 {
     public interface IEvent
     {

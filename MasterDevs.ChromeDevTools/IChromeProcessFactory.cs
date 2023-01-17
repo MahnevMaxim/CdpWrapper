@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools
+namespace Mybot.ChromeDevTools
 {
     public interface IChromeProcessFactory
     {

@@ -1,10 +1,10 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CacheStorage{
+namespace Mybot.ChromeDevTools.Protocol.Chrome.CacheStorage{
 	/// <summary>
 	/// type of HTTP response cached
 	/// </summary>

@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
+namespace Mybot.ChromeDevTools.Protocol.Chrome.LayerTree
 {
 	/// <summary>
 	/// Serialized fragment of layer picture along with its offset within the layer.

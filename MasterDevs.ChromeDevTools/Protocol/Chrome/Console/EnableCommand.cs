@@ -1,9 +1,9 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Console
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Console
 {
 	/// <summary>
 	/// Enables console domain, sends the messages collected so far to the client by means of the `messageAdded` notification.

@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Emulation
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Emulation
 {
 	/// <summary>
 	/// Used to specify User Agent Cient Hints to emulate. See https://wicg.github.io/ua-client-hints

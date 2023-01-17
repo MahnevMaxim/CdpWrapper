@@ -1,10 +1,10 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger{
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Debugger{
 	/// <summary>
 	/// Enum of possible script languages.
 	/// </summary>

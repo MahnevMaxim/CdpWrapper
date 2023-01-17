@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
+namespace Mybot.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
 	/// Fired when page is about to start a download.

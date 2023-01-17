@@ -1,8 +1,8 @@
-using MasterDevs.ChromeDevTools;
+using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MasterDevs.ChromeDevTools.Protocol.Chrome.WebAudio
+namespace Mybot.ChromeDevTools.Protocol.Chrome.WebAudio
 {
 	/// <summary>
 	/// Notifies that existing BaseAudioContext has changed some properties (id stays the same)..
