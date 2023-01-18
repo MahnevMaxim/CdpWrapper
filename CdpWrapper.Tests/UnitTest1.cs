@@ -21,10 +21,10 @@ namespace CdpWrapper.Tests
             string localAppDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ChromeModTests");
             profilePath = Path.Combine(localAppDir, Path.GetRandomFileName());
 
-            chromeInstance = new ChromeMod(Logger, true, profilePath);
+            chromeInstance = new ChromeMod(Logger, true, profilePath, null);
 
-            IChromeSession result =
-                await chromeInstance.GetChromeSession();
+            //_ =
+            //    await chromeInstance.GetChromeSession();
         }
 
         public void Logger(string mess, Exception ex)

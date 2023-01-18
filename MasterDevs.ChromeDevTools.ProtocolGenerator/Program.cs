@@ -13,7 +13,9 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         private const string CommandResponseAttribute = "CommandResponse";
         private const string EventAttribute = "Event";
         private const string ProtocolNameClass = "ProtocolName";
-        private const string RootNamespace = "MasterDevs.ChromeDevTools.Protocol";
+        private const string RootNamespace = "Mybot.ChromeDevTools.Protocol";
+        private const string UsingRootNamespace = "using Mybot.ChromeDevTools;";
+        private const string PragmaWarningDisable = "#pragma warning disable";
         private const string CommandSubclass = "Command";
         private const string CommandResponseSubclass = CommandSubclass + "Response";
         private const string EventSubclass = "Event";
@@ -153,7 +155,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         private static void WriteMethodConstants(DirectoryInfo domainDirectoryInfo, string ns)
         {
             var sb = new StringBuilder();
-            sb.AppendFormat("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendFormat(UsingRootNamespace);
             sb.AppendLine();
             sb.AppendLine();
             sb.AppendFormat("namespace {0}.{1}", RootNamespace, ns);
@@ -211,7 +214,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         {
             var className = ToCamelCase(eventName) + EventSubclass;
             var sb = new StringBuilder();
-            sb.AppendLine("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendLine(UsingRootNamespace);
             sb.AppendLine("using Newtonsoft.Json;");
             sb.AppendLine("using System.Collections.Generic;");
             sb.AppendLine();
@@ -250,7 +254,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         {
             var className = ToCamelCase(commandName) + CommandResponseSubclass;
             var sb = new StringBuilder();
-            sb.AppendLine("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendLine(UsingRootNamespace);
             sb.AppendLine("using Newtonsoft.Json;");
             sb.AppendLine("using System;");
             sb.AppendLine("using System.Collections.Generic;");
@@ -281,7 +286,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             var className = ToCamelCase(commandName) + CommandSubclass;
             var responseClassName = ToCamelCase(commandName) + CommandResponseSubclass;
             var sb = new StringBuilder();
-            sb.AppendLine("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendLine(UsingRootNamespace);
             sb.AppendLine("using Newtonsoft.Json;");
             sb.AppendLine("using System;");
             sb.AppendLine("using System.Collections.Generic;");
@@ -348,7 +354,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             if ("object" != type.Kind) return;
             var className = type.Name;
             var sb = new StringBuilder();
-            sb.AppendFormat("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendFormat(UsingRootNamespace);
             sb.AppendLine();
             sb.AppendLine("using Newtonsoft.Json;");
             sb.AppendLine("using System.Collections.Generic;");
@@ -507,7 +514,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         {
             var enumName = type.Name;
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("using MasterDevs.ChromeDevTools;");
+            sb.AppendLine(PragmaWarningDisable);
+            sb.AppendLine(UsingRootNamespace);
             sb.AppendLine("using Newtonsoft.Json;");
             sb.AppendLine("using Newtonsoft.Json.Converters;");
             sb.AppendLine("using System.Runtime.Serialization;");
@@ -554,6 +562,7 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
 
         private static void WriteToFile(DirectoryInfo domainDirectoryInfo, string fileName, string fileContents)
         {
+            fileContents = fileContents.Replace("StringIndex[][]","object");
             var fullPath = Path.Combine(domainDirectoryInfo.FullName, fileName + ".cs");
             if (File.Exists(fullPath)) File.Delete(fullPath);
             File.WriteAllText(fullPath, fileContents);

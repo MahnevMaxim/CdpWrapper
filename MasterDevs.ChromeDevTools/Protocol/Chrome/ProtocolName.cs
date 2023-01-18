@@ -1,3 +1,4 @@
+#pragma warning disable
 using Mybot.ChromeDevTools;
 
 namespace Mybot.ChromeDevTools.Protocol.Chrome

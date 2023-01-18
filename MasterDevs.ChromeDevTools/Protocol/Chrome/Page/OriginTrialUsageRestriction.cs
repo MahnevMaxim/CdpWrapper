@@ -1,3 +1,4 @@
+#pragma warning disable
 using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;

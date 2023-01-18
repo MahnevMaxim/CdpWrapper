@@ -1,5 +1,4 @@
-﻿using Mybot.ChromeDevTools.Protocol.Chrome.Cast;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -11,10 +10,10 @@ namespace Mybot.ChromeDevTools
         public IDirectoryCleaner DirectoryCleaner { get; set; }
         public string ChromePath { get; }
 
-        const string chromePath86 = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
-        const string chromePath64 = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+        private const string chromePath86 = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+        private const string chromePath64 = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
 
-        public ChromeProcessFactory(string chromePath = null)
+        public ChromeProcessFactory(string chromePath)
         {
             if (chromePath == null)
             {

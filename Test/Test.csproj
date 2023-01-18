@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CdpWrapper\CdpWrapper.csproj" />
+    <ProjectReference Include="..\MasterDevs.ChromeDevTools\Mybot.ChromeDevTools.csproj" />
   </ItemGroup>
 
 </Project>

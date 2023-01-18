@@ -1,5 +1,4 @@
-﻿using Mybot.ChromeDevTools.Protocol.Chrome.Fetch;
-using Mybot.ChromeDevTools.Protocol.Chrome.Network;
+﻿using Mybot.ChromeDevTools.Protocol.Chrome.Network;
 using Mybot.ChromeDevTools.Protocol.Chrome.Page;
 using Mybot.ChromeDevTools;
 using Newtonsoft.Json;
@@ -39,12 +38,16 @@ namespace CdpWrapper
         internal readonly Action<string, Exception> logger;
         private readonly bool isVisible;
         private readonly string profilePath;
+        private readonly string exeFilePath;
 
-        public ChromeMod(Action<string, Exception> logger, bool isVisible, string profilePath)
+        public ChromeMod(Action<string, Exception> logger, bool isVisible, string profilePath, string exeFilePath, List<string> args = null, string profileArgs = null)
         {
             this.logger = logger;
             this.isVisible = isVisible;
             this.profilePath = profilePath;
+            this.exeFilePath = exeFilePath;
+            Task task = Task.Run(() => CreateChromeSession(args, profileArgs).ConfigureAwait(false).GetAwaiter().GetResult());
+            task.Wait();
         }
 
         #region Init
@@ -52,7 +55,7 @@ namespace CdpWrapper
         /// <summary>
         /// Это версия для передачи аргументов командной строки
         /// </summary>
-        public async Task<IChromeSession> GetChromeSession(List<string> args = null, string profileArgs = null)
+        public async Task CreateChromeSession(List<string> args = null, string profileArgs = null)
         {
             if (args != null)
             {
@@ -62,7 +65,7 @@ namespace CdpWrapper
                 }
             }
 
-            ChromeProcessFactory chromeProcessFactory = new ChromeProcessFactory();
+            ChromeProcessFactory chromeProcessFactory = new ChromeProcessFactory(exeFilePath);
             port = GetFreeLocalPort();
             logger($"FreeLocalPort: {port}", null);
             ChromeProcess = chromeProcessFactory.CreateNew(port, !isVisible, null, profilePath, null, args, profileArgs);
@@ -113,37 +116,6 @@ namespace CdpWrapper
             ChromeSessionFactory chromeSessionFactory = new ChromeSessionFactory();
             ChromeSession = chromeSessionFactory.Create(sessionInfo.WebSocketDebuggerUrl, logger);
 
-            logger($"sessionInfo.WebSocketDebuggerUrl: {sessionInfo.WebSocketDebuggerUrl}", null);
-
-            ChromeSession.BrowserEndPoint = await ChromeProcess.GetBrowserSessionInfo();
-
-            return ChromeSession;
-        }
-
-        /// <summary>
-        /// Для присоединения к хрому без запуска процесса
-        /// </summary>
-        /// <param name="port"></param>
-        /// <returns></returns>
-        public async Task<IChromeSession> GetChromeSession(int port)
-        {
-            ChromeSessionInfo sessionInfo = null;
-            ChromeSessionInfo[] result = await GetSessionInfo(port);
-            sessionInfo = result != null ? result[0] : throw new Exception("Can't recive session info");
-
-            ChromeSessionFactory chromeSessionFactory = new ChromeSessionFactory();
-            ChromeSession = chromeSessionFactory.Create(sessionInfo.WebSocketDebuggerUrl, logger);
-
-            ChromeSession.Subscribe<RequestPausedEvent>(requestPausedEvent =>
-            {
-                RequestPausedEventHandler(requestPausedEvent);
-            });
-
-            ChromeSession.Subscribe<AuthRequiredEvent>(authRequiredEvent =>
-            {
-                AuthRequiredEventHandler(authRequiredEvent);
-            });
-
             ChromeSession.Subscribe<FrameNavigatedEvent>(frameNavigatedEvent =>
             {
                 FrameNavigatedEventHandler(frameNavigatedEvent);
@@ -154,13 +126,9 @@ namespace CdpWrapper
                 LoadingFinishedEventHandler(loadingFinishedEvent);
             });
 
-            //enable page
-            ICommandResponse pageEnableResult = await ChromeSession.SendAsync<Mybot.ChromeDevTools.Protocol.Chrome.Page.EnableCommand>();
-            //enable network
-            CommandResponse<Mybot.ChromeDevTools.Protocol.Chrome.Network.EnableCommandResponse> enableNetwork
-                = await ChromeSession.SendAsync(new Mybot.ChromeDevTools.Protocol.Chrome.Network.EnableCommand());
+            logger($"sessionInfo.WebSocketDebuggerUrl: {sessionInfo.WebSocketDebuggerUrl}", null);
 
-            return ChromeSession;
+            ChromeSession.BrowserEndPoint = await ChromeProcess.GetBrowserSessionInfo();
         }
 
         public async Task<ChromeSessionInfo[]> GetSessionInfo(int port)
@@ -232,12 +200,14 @@ namespace CdpWrapper
             return 0;
         }
 
+#pragma warning disable IDE0060 // Remove unused parameter
         private async void LoadingFinishedEventHandler(LoadingFinishedEvent loadingFinishedEvent)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
             try
             {
-                WriteObject(loadingFinishedEvent);
                 CurrentUrl = await GetCurrentUrl();
+                logger($"CurrentUrl: {CurrentUrl}", null);
             }
             catch (Exception ex)
             {
@@ -249,51 +219,11 @@ namespace CdpWrapper
         {
             try
             {
-                WriteObject(frameNavigatedEvent);
                 if (string.IsNullOrWhiteSpace(frameNavigatedEvent.Frame.ParentId))
                 {
                     CurrentUrl = frameNavigatedEvent.Frame.Url;
+                    logger($"CurrentUrl: {CurrentUrl}", null);
                 }
-            }
-            catch (Exception ex)
-            {
-                logger(ex.Message, ex);
-            }
-        }
-
-        private void AuthRequiredEventHandler(AuthRequiredEvent authRequiredEvent)
-        {
-            try
-            {
-                WriteObject(authRequiredEvent);
-                string requestId = authRequiredEvent.RequestId;
-
-                Mybot.ChromeDevTools.Protocol.Chrome.Fetch.AuthChallengeResponse acr = new Mybot.ChromeDevTools.Protocol.Chrome.Fetch.AuthChallengeResponse()
-                {
-                    Response = "ProvideCredentials",
-                    Username = ChromeSession.ProxyUser,
-                    Password = ChromeSession.ProxyPass
-                };
-
-                Task<CommandResponse<ContinueWithAuthCommandResponse>> auth = ChromeSession.SendAsync(new ContinueWithAuthCommand
-                {
-                    RequestId = requestId,
-                    AuthChallengeResponse = acr
-                });
-            }
-            catch (Exception ex)
-            {
-                logger(ex.Message, ex);
-            }
-        }
-
-        private void RequestPausedEventHandler(RequestPausedEvent requestPausedEvent)
-        {
-            try
-            {
-                WriteObject(requestPausedEvent);
-                string requestId = requestPausedEvent.RequestId;
-                Task<CommandResponse<ContinueRequestCommandResponse>> cont = ChromeSession.SendAsync(new ContinueRequestCommand { RequestId = requestId });
             }
             catch (Exception ex)
             {
@@ -325,17 +255,7 @@ namespace CdpWrapper
             return url;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
-        private static void WriteObject(object ob)
-        {
-            return;
-            //string obString = JsonConvert.SerializeObject(ob);
-            //Console.WriteLine("RECIVE <<< " + ob.GetType() + " " + obString);
-        }
-
         #endregion
-
-
 
         //public async Task<long?> IsElementExist(string cssSelector)
         //{
@@ -409,40 +329,6 @@ namespace CdpWrapper
         //    {
         //        return null;
         //    }
-        //}
-
-
-
-        //public async Task<CDPResponse> InsertText(string cssSelector, string text)
-        //{
-        //    CDPResponse cdpr = new();
-        //    try
-        //    {
-        //        long? docNodeId = await GetDocNodeID();
-
-        //        CommandResponse<QuerySelectorCommandResponse> qs = await chromeSession.SendAsync(new QuerySelectorCommand
-        //        {
-        //            NodeId = (long)docNodeId,
-        //            Selector = cssSelector
-        //        });
-        //        long elementNodeId = qs.Result.NodeId;
-
-        //        CommandResponse<FocusCommandResponse> sv = await chromeSession.SendAsync(new FocusCommand
-        //        {
-        //            NodeId = elementNodeId
-        //        });
-
-        //        CommandResponse<Chrome.Input.InsertTextCommandResponse> it = await chromeSession.SendAsync(new Chrome.Input.InsertTextCommand
-        //        {
-        //            Text = text
-        //        });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //        cdpr.ErrorMessage = ex.Message;
-        //    }
-        //    return cdpr;
         //}
 
         //public async Task<Cookie[]> GetCookies()
@@ -519,30 +405,6 @@ namespace CdpWrapper
         //    catch (Exception ex)
         //    {
         //        logger(ex.Message, ex);
-        //    }
-        //}
-
-        //public async Task<long?> GetNodeId(string cssSelector)
-        //{
-        //    try
-        //    {
-        //        long? docNodeId = await GetDocNodeID();
-        //        if (docNodeId == null)
-        //        {
-        //            return null;
-        //        }
-
-        //        CommandResponse<QuerySelectorCommandResponse> qs = await chromeSession.SendAsync(new QuerySelectorCommand
-        //        {
-        //            NodeId = (long)docNodeId,
-        //            Selector = cssSelector
-        //        });
-        //        return qs.Result.NodeId;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //        return null;
         //    }
         //}
 

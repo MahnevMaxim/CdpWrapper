@@ -8,13 +8,12 @@ namespace CdpWrapper.Extensions
 {
     public static class MainChromeModExtensions
     {
-        public static async Task<CommandResponse> Close(this ChromeMod chromeMod)
+        public static void Close(this ChromeMod chromeMod)
         {
-            CommandResponse commandResponse = null;
-
             try
             {
-                commandResponse = await chromeMod.ChromeSession.SendAsync(new Mybot.ChromeDevTools.Protocol.Chrome.Browser.CloseCommand());
+                CommandResponse commandResponse = Task.Run(() => chromeMod.ChromeSession.SendAsync(new Mybot.ChromeDevTools.Protocol.Chrome.Browser.CloseCommand()))
+                .ConfigureAwait(false).GetAwaiter().GetResult();
             }
             catch (Exception ex)
             {
@@ -28,8 +27,6 @@ namespace CdpWrapper.Extensions
                     chromeMod.logger(ex2.Message, ex2);
                 }
             }
-
-            return commandResponse;
         }
 
         public static CallResult<CommandResponse<NavigateCommandResponse>> Navigate(this ChromeMod chromeMod, string url)
